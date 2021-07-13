@@ -161,6 +161,7 @@ const ListScreen = ({ navigation }: any) => {
     fetch('https://jsonplaceholder.typicode.com/photos').then(resp => resp.json()).then(resp => setData(resp))
   })
   return <SafeAreaView style={{ flex: 1 }}>
+    <Title style={{ margin: 10, marginBottom: 20 }}>List View</Title>
     <ScrollView>
       {
         data.slice(0, 100).map((item: any, index: number) =>
